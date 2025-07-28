@@ -1,135 +1,24 @@
-# bert-inf-2 - offline batching/ on demand
+# bert-base-inf-2 — offline batching / on‑demand
 
-activate venv- source /opt/aws_neuronx_venv_pytorch_2_7_transformers//bin/activate
+**Activate venv**
+
+```bash
+source /opt/aws_neuronx_venv_pytorch_2_7_transformers//bin/activate
+```
 
 initial:
 
-------------------------------------------------------------
-Filename:    model_batch_size_1.pt
-Batch Size:  1
-Batches:     12000
-Inferences:  12000
-Threads:     12
-Models:      12
-Duration:    0.949
-Throughput:  12649.572
-Latency P50: 0.939
-Latency P95: 0.974
-Latency P99: 0.990
+| Filename                  | Batch | Batches | Inferences | Threads | Models | Duration (s) | Throughput (inf/s) | P50 (s) | P95 (s) | P99 (s) |
+| ------------------------- | ----: | ------: | ---------: | ------: | -----: | -----------: | -----------------: | ------: | ------: | ------: |
+| model\_batch\_size\_1.pt  |     1 |   12000 |      12000 |      12 |     12 |        0.949 |          12649.572 |   0.939 |   0.974 |   0.990 |
+| model\_batch\_size\_2.pt  |     2 |   12000 |      24000 |      12 |     12 |        1.559 |          15394.022 |   1.522 |   1.594 |   1.631 |
+| model\_batch\_size\_3.pt  |     3 |   12000 |      36000 |      12 |     12 |        2.134 |          16869.460 |   2.115 |   2.192 |   2.220 |
+| model\_batch\_size\_4.pt  |     4 |   12000 |      48000 |      12 |     12 |        2.730 |      **17584.681** |   2.723 |   2.794 |   2.820 |
+| model\_batch\_size\_5.pt  |     5 |   12000 |      60000 |      12 |     12 |        3.561 |          16851.301 |   3.512 |   3.659 |   3.694 |
+| model\_batch\_size\_6.pt  |     6 |   12000 |      72000 |      12 |     12 |        4.331 |          16624.728 |   4.302 |   4.486 |   4.569 |
+| model\_batch\_size\_7.pt  |     7 |   12000 |      84000 |      12 |     12 |        5.018 |          16738.430 |   4.940 |   5.292 |   5.331 |
+| model\_batch\_size\_8.pt  |     8 |   12000 |      96000 |      12 |     12 |        5.827 |          16475.001 |   5.760 |   6.305 |   6.426 |
+| model\_batch\_size\_9.pt  |     9 |   12000 |     108000 |      12 |     12 |        7.002 |          15423.520 |   6.826 |   7.422 |   7.536 |
+| model\_batch\_size\_10.pt |    10 |   12000 |     120000 |      12 |     12 |        7.752 |          15480.798 |   7.577 |   8.229 |   8.504 |
 
-------------------------------------------------------------
-Filename:    model_batch_size_2.pt
-Batch Size:  2
-Batches:     12000
-Inferences:  24000
-Threads:     12
-Models:      12
-Duration:    1.559
-Throughput:  15394.022
-Latency P50: 1.522
-Latency P95: 1.594
-Latency P99: 1.631
-
-------------------------------------------------------------
-Filename:    model_batch_size_3.pt
-Batch Size:  3
-Batches:     12000
-Inferences:  36000
-Threads:     12
-Models:      12
-Duration:    2.134
-Throughput:  16869.460
-Latency P50: 2.115
-Latency P95: 2.192
-Latency P99: 2.220
-
-------------------------------------------------------------
-Filename:    model_batch_size_4.pt
-Batch Size:  4
-Batches:     12000
-Inferences:  48000
-Threads:     12
-Models:      12
-Duration:    2.730
-Throughput:  17584.681
-Latency P50: 2.723
-Latency P95: 2.794
-Latency P99: 2.820
-
-------------------------------------------------------------
-Filename:    model_batch_size_5.pt
-Batch Size:  5
-Batches:     12000
-Inferences:  60000
-Threads:     12
-Models:      12
-Duration:    3.561
-Throughput:  16851.301
-Latency P50: 3.512
-Latency P95: 3.659
-Latency P99: 3.694
-
-------------------------------------------------------------
-Filename:    model_batch_size_6.pt
-Batch Size:  6
-Batches:     12000
-Inferences:  72000
-Threads:     12
-Models:      12
-Duration:    4.331
-Throughput:  16624.728
-Latency P50: 4.302
-Latency P95: 4.486
-Latency P99: 4.569
-
-------------------------------------------------------------
-Filename:    model_batch_size_7.pt
-Batch Size:  7
-Batches:     12000
-Inferences:  84000
-Threads:     12
-Models:      12
-Duration:    5.018
-Throughput:  16738.430
-Latency P50: 4.940
-Latency P95: 5.292
-Latency P99: 5.331
-
-------------------------------------------------------------
-Filename:    model_batch_size_8.pt
-Batch Size:  8
-Batches:     12000
-Inferences:  96000
-Threads:     12
-Models:      12
-Duration:    5.827
-Throughput:  16475.001
-Latency P50: 5.760
-Latency P95: 6.305
-Latency P99: 6.426
-
-------------------------------------------------------------
-Filename:    model_batch_size_9.pt
-Batch Size:  9
-Batches:     12000
-Inferences:  108000
-Threads:     12
-Models:      12
-Duration:    7.002
-Throughput:  15423.520
-Latency P50: 6.826
-Latency P95: 7.422
-Latency P99: 7.536
-
-------------------------------------------------------------
-Filename:    model_batch_size_10.pt
-Batch Size:  10
-Batches:     12000
-Inferences:  120000
-Threads:     12
-Models:      12
-Duration:    7.752
-Throughput:  15480.798
-Latency P50: 7.577
-Latency P95: 8.229
-Latency P99: 8.504
+Note: Peak throughput observed at batch size 4 (≈17,585 inf/s); beyond that, throughput flattens or declines while latencies increase.

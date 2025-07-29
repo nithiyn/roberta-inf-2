@@ -5,7 +5,7 @@ import concurrent.futures
 import numpy as np
 import torch  # Added missing import
 
-def benchmark(filename, example, n_models=12, n_threads=12, batches_per_thread=1000):
+def benchmark(filename, example, n_models=1, n_threads=1, batches_per_thread=1):
     """
     Record performance statistics for a serialized model and its input example.
     Arguments:

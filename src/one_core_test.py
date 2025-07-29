@@ -22,7 +22,7 @@ def main():
         model_neuron = torch_neuronx.trace(encoder.model, paraphrase)
         logging.info(f"Traced model...")
         # Save the TorchScript for inference deployment
-        filename = 'model.pt'
+        filename = 'model_1024.pt'
         torch.jit.save(model_neuron, filename)
         # Load the TorchScript compiled model
         model_neuron = torch.jit.load(filename)
@@ -40,6 +40,6 @@ def main():
         print(f"❌ Error in main(): {e}")
         import traceback
         traceback.print_exc()
-        
+
 if __name__ == "__main__":
     main()  # ← This line is missing!

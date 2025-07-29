@@ -19,7 +19,7 @@ class BERTEncoder:
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForSequenceClassification.from_pretrained(model_name, torchscript=True)
     
-    def encode(self, *inputs, max_length=128, batch_size=1):
+    def encode(self, *inputs, max_length=512, batch_size=256):
         tokens = self.tokenizer.encode_plus(
             *inputs,
             max_length=max_length,

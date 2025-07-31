@@ -22,7 +22,7 @@ def main():
         model_neuron = torch_neuronx.trace(encoder.model, paraphrase)
         logging.info(f"Traced model...")
         # Save the TorchScript for inference deployment
-        filename = 'model_1024.pt'
+        filename = 'model_4_batch.pt'
         torch.jit.save(model_neuron, filename)
         # Load the TorchScript compiled model
         model_neuron = torch.jit.load(filename)

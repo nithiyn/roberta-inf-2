@@ -14,8 +14,8 @@ logging.basicConfig(
 encoder= BERTEncoder()
 
 logging.info("encoding sequences")
-example = encoder.encode(encoder.sequence_0, encoder.sequence_2, batch_size=256)
-filename = 'model_1024.pt'
+example = encoder.encode(encoder.sequence_0, encoder.sequence_2, batch_size=4)
+filename = 'model_4_batch.pt'
         
 # Run benchmark
 metrics = benchmark(filename, example)

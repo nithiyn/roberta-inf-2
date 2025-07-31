@@ -8,7 +8,6 @@ source /opt/aws_neuronx_venv_pytorch_2_7_transformers/bin/activate
 
 initial:
 
-Here's the data formatted as a markdown table:
 
 | Filename | Batch Size | Batches | Inferences | Threads | Models | Duration | Throughput | Latency P50 | Latency P95 | Latency P99 |
 |----------|------------|---------|------------|---------|--------|----------|------------|-------------|-------------|-------------|

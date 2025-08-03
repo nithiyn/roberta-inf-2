@@ -19,12 +19,8 @@ source /opt/aws_neuronx_venv_pytorch_2_7_transformers/bin/activate
 
 ### per core sweet spot for model
 
-for batch size 4, seq len 512- utilization for core is 14.14% over the window
 used neuron-monitor to capture, its counter is per capture window,
- so 12 executions over this interval is:
-```json
-"neuroncore_counters":{"period":1.000020219,"neuroncores_in_use":{"0":{"neuroncore_utilization":14.14078061158105,"effective_flops":4638521865814}
-```
+
 batch size 8
 ```json
 "neuroncore_counters":{"period":1.000385359,"neuroncores_in_use":{"0":{"neuroncore_utilization":99.38037580375642,"effective_flops":34776185139834}

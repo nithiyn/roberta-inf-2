@@ -39,4 +39,4 @@ batch size 32 , seq len 512
 {"neuroncore_utilization":100,"effective_flops":34576410132558},"1",
 {"period":1.000580757,"neuroncores_in_use":{"0":{"neuroncore_utilization":100,"effective_flops":34576410132558},"1" 
 ```
-sweet spot for throughput/latency, hardware util is with per core batch = 8–16 for seq len 512. less than or equal to 95% of peak throughput with much lower latency than batch=32 of 90ms, which is where we touch the compute ceiling. for scaling QPS we can do DP with continous batching and have max batch delay at 5-15% of the batch latency we pick between 8-16 for the batch size and look at how we can keep p50/p95 reasonable.
+sweet spot for throughput/latency, hardware util is with per core batch around 8 or so for seq len 512. less than or equal to 95% of peak throughput with much lower latency than batch=32 of 90ms, which is where we touch the compute ceiling. for scaling QPS we can do DP with continous batching and have max batch delay at 5-15% of the batch latency if we pick 8 for the batch size and look at how we can keep p50/p95 reasonable.

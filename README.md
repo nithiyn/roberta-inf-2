@@ -14,7 +14,7 @@ source /opt/aws_neuronx_venv_pytorch_2_7_nxd_inference/bin/activate
 pip install -r requirements.txt
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/

@@ -77,7 +77,7 @@ Found entities:
   City -> I-LOC (confidence: 0.992)
 ```
 
-## 🛠️ Development & Debugging
+## Development & Debugging
 
 ### Compilation Artifacts
 - **Neuron Cache**: `./neuron_cache/` - Compiled model cache

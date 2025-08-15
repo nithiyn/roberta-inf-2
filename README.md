@@ -21,7 +21,7 @@ src/
 ├── bert_encode.py           # RoBERTa NER encoder class
 ├── one_core_test.py         # Single core NER tes- logits and output
 ├── multi_batch_test.py      # Multi-batch size benchmarking (128 batches each)
-├── optimum_ner_test.py              
+            
 ```
 
 ## Available Test Scripts

@@ -38,13 +38,6 @@ python src/multi_batch_test.py
 ```
 compile+  benchmarking across batch sizes [4, 8, 16, 32] with 128 batches per size.
 
-### 3. Sequence Length Analysis
-```bash
-python src/multi_seq_length_test.py
-```
-Performance analysis across sequence lengths [128, 256, 512, 1024] with fixed batch size.
-
-Simplified approach using Hugging Face Optimum Neuron library.
 
 ### Batch Size Performance Analysis -roberta-base
 | Batch Size | Seq Len | Filename                           | Batches | Inferences | Threads | Models | Duration (s) | Throughput (inf/s) | P50 (ms) | P95 (ms) | P99 (ms) |

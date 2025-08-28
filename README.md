@@ -52,6 +52,21 @@ compile+  benchmarking across batch sizes [4, 8, 16, 32] with 128 batches per si
 |            |     512 | ner\_model\_batch\_32\_seq\_512.pt |     128 |       4096 |       1 |      1 |       13.817 |             296.44 |  107.938 |  107.999 |  108.041 |
 
 
+### Batch Size prrf- roberta-large
+| Batch Size | Seq Len | Filename                                  | Batches | Inferences | Threads | Models | Duration (s) | Throughput (inf/s) | P50 (ms) | P95 (ms) | P99 (ms) |
+| ---------: | ------: | ----------------------------------------- | ------: | ---------: | ------: | -----: | -----------: | -----------------: | -------: | -------: | -------: |
+|          4 |     128 | ner\_large\_model\_batch\_4\_seq\_128.pt  |     128 |        512 |       1 |      1 |        1.088 |             470.76 |    8.497 |    8.516 |    8.540 |
+|            |     512 | ner\_large\_model\_batch\_4\_seq\_512.pt  |     128 |        512 |       1 |      1 |        5.515 |              92.84 |   43.067 |   43.145 |   43.194 |
+|          8 |     128 | ner\_large\_model\_batch\_8\_seq\_128.pt  |     128 |       1024 |       1 |      1 |        2.209 |             463.53 |   17.247 |   17.325 |   17.349 |
+|            |     512 | ner\_large\_model\_batch\_8\_seq\_512.pt  |     128 |       1024 |       1 |      1 |       10.635 |              96.29 |   83.063 |   83.125 |   83.147 |
+|         16 |     128 | ner\_large\_model\_batch\_16\_seq\_128.pt |     128 |       2048 |       1 |      1 |        4.355 |             470.29 |   34.002 |   34.061 |   34.071 |
+|            |     512 | ner\_large\_model\_batch\_16\_seq\_512.pt |     128 |       2048 |       1 |      1 |       21.961 |              93.26 |  171.460 |  171.530 |  175.735 |
+|         32 |     128 | ner\_large\_model\_batch\_32\_seq\_128.pt |     128 |       4096 |       1 |      1 |        8.888 |             460.84 |   69.426 |   69.462 |   69.489 |
+|            |     512 | ner\_large\_model\_batch\_32\_seq\_512.pt |     128 |       4096 |       1 |      1 |       43.095 |              95.05 |  336.673 |  336.781 |  336.870 |
+
+
+
+
 ##  Configuration Options
 
 ### Environment Variables
